@@ -8,6 +8,11 @@ app.use(cors({
 }))
 app.use(expres.json({limit:"16kb"})) //json ka data
 app.use(expres.urlencoded({extended: true, limit:"16kb"})) // url data
+app.use(expres.static("public"))
+app.use(cookieParser())
+
+//middleware
+
 
 export { app }
 
