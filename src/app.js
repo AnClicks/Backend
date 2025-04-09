@@ -20,7 +20,7 @@ import userRouter from './routes/user.routes.js'
 
 
 //routes declaration //we could have user app.get to perform any action but controllers are else where so use the fuction like middlewares
-app.use("/ api/v1/users",userRouter)
+app.use("/api/v1/users",userRouter)
 
 
 
