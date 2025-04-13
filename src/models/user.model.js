@@ -25,7 +25,7 @@ const userSchema = new Schema({
     },
     avatar:{
         type:String, //cloudinary url
-        required: true
+        required: false
     },
     coverImage: {
         type: String //cloudinary url
@@ -84,4 +84,4 @@ userSchema.methods.generateRefreshToken = function(){
     )
 }
 
-export const User = mongoose.model.apply('User',userSchema)
+export const User = mongoose.model('User',userSchema)
