@@ -274,7 +274,7 @@ const updateCoverImage = asyncHandler(async(req,res)=>{
     if(!coverImage.url){
         throw new ApiError(400,"Error while uploading cover image")
     }
-    const user =User.findByIdAndUpdate(req._id,
+    const user =await User.findByIdAndUpdate(req._id,
         {
             $set:{
                 coverImage:coverImage.url
